@@ -1,4 +1,5 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
+const DEFAULT_API = "https://ai-call-summary-website-server.vercel.app/api";
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || DEFAULT_API).replace(/\/+$/, "");
 const SESSION_KEY = "call-flow-session";
 
 export const clearSession = () => localStorage.removeItem(SESSION_KEY);
