@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "id": "user-demo",
+      "appUserId": "CALL-240001",
+      "name": "Demo Admin",
+      "passwordHash": "46c4e3abf626a3b55cf4b1e4e0e05a31:663405412e30369a58d75d32101c4ff952b82c3cf7de4e24f7c7f0a76c5e1e5221b038b5a723aeed4d53f78d07a8e4eccfb78e2197544cff5dda395b753a6632"
+    }
+  ],
+  "companyRequests": [
+    {
+      "id": "request-1782644590418-hhvyxb",
+      "companyName": "kaighost",
+      "adminName": "sai",
+      "email": "bhaveshpatil4251@gmail.com",
+      "phone": "+919307601125",
+      "loginId": "kai",
+      "passwordHash": "75a9689d53931c5fbf1aa1c70e4c8dc7:1a78823590b1a4e33d819d7cca9380909ed47a021c3230d8225e86917649fcaf2e3d1863e0b3f63a5a51a6d6950a718e9a238b62e71635ce22e28b0f1cc449de",
+      "notes": "u f j",
+      "status": "pending",
+      "submittedAt": "2026-06-28T11:03:10.468Z",
+      "reviewedAt": null,
+      "reviewedBy": null
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-1",
+      "userId": "user-demo",
+      "name": "Ananya Sharma",
+      "company": "BluePeak Solar",
+      "phone": "+919876543210",
+      "email": "ananya@bluepeak.example",
+      "source": "Website form",
+      "status": "Warm",
+      "score": 82,
+      "lastContactedAt": "2026-06-01T09:18:29.094Z",
+      "nextFollowUpAt": "2026-06-03T09:18:29.094Z",
+      "notes": [
+        {
+          "id": "note-1",
+          "createdAt": "2026-05-31T09:18:29.094Z",
+          "content": "Interested in a weekday demo. Asked for a cost comparison with their current vendor."
+        }
+      ],
+      "callLogs": [
+        {
+          "id": "call-1",
+          "createdAt": "2026-06-01T09:18:29.094Z",
+          "direction": "Outbound",
+          "outcome": "Interested",
+          "summary": "Quick intro call. She requested a proposal next week."
+        }
+      ],
+      "smsLogs": [
+        {
+          "id": "sms-1",
+          "createdAt": "2026-06-01T09:18:29.094Z",
+          "direction": "Outbound",
+          "summary": "Sent demo confirmation and meeting time options."
+        }
+      ]
+    },
+    {
+      "id": "lead-2",
+      "userId": "user-demo",
+      "name": "Rahul Verma",
+      "company": "Northline Fitness",
+      "phone": "+919811112222",
+      "email": "rahul@northline.example",
+      "source": "Referral",
+      "status": "New",
+      "score": 64,
+      "lastContactedAt": null,
+      "nextFollowUpAt": "2026-06-02T09:18:29.094Z",
+      "notes": [],
+      "callLogs": [],
+      "smsLogs": []
+    },
+    {
+      "id": "lead-3",
+      "userId": "user-demo",
+      "name": "Sara Khan",
+      "company": "KiteCart",
+      "phone": "+919955667788",
+      "email": "sara@kitecart.example",
+      "source": "LinkedIn outreach",
+      "status": "Proposal",
+      "score": 91,
+      "lastContactedAt": "2026-05-30T09:18:29.094Z",
+      "nextFollowUpAt": "2026-06-04T09:18:29.094Z",
+      "notes": [
+        {
+          "id": "note-2",
+          "createdAt": "2026-05-29T09:18:29.094Z",
+          "content": "Wants a custom onboarding workflow and team reporting."
+        }
+      ],
+      "callLogs": [
+        {
+          "id": "call-2",
+          "createdAt": "2026-05-30T09:18:29.094Z",
+          "direction": "Outbound",
+          "outcome": "Follow-up",
+          "summary": "Deep-dive product call with two stakeholders."
+        }
+      ],
+      "smsLogs": []
+    }
+  ]
+}

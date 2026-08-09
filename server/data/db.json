@@ -1,0 +1,156 @@
+{
+  "users": [
+    {
+      "id": "user-demo",
+      "role": "platform_admin",
+      "loginId": "admin",
+      "companyName": "Call Flow CRM",
+      "approvalStatus": "approved",
+      "appUserId": "CALL-240001",
+      "name": "Demo Admin",
+      "email": "admin@callflowcrm.com",
+      "passwordHash": "c86d7f7a510dd888f1dafa751e6ed5a6:6fe4b469213bf3b1a5a19d6165d2c73a18c47c3a3e22f100fe40462bb0492975e588729ddf74ef4ed93f2c102bfaec09868b7776dcf226b17b3da394b6937541",
+      "firebaseEmail": "admin@callflowcrm.local",
+      "firebaseUid": "user-demo"
+    },
+    {
+      "id": "user-1782647057558-2koy77",
+      "role": "company_admin",
+      "loginId": "testcompany",
+      "companyName": "Test Company",
+      "approvalStatus": "approved",
+      "appUserId": "CALL-700359",
+      "name": "Test Owner",
+      "email": "owner@test.com",
+      "phone": "+911234567890",
+      "passwordHash": "c0388a0e573fe5bf1115735bac0001c3:6189ceb5d8a2a747ac82970f330dfcc0fc643ef097cf430085dc73bc230e0051dcabdfcb5a4005d63a6f9a6709f42e1085d2680fa7e49e7e93348aa7da5ce080"
+    },
+    {
+      "id": "user-1782665607726-arigq2",
+      "role": "company_admin",
+      "loginId": "kai",
+      "companyName": "kaighost",
+      "approvalStatus": "approved",
+      "appUserId": "CALL-116715",
+      "name": "sai",
+      "email": "bhaveshpatil4251@gmail.com",
+      "phone": "+919307601125",
+      "passwordHash": "3b998b95cf0bad1f32aa549ae4d74868:2bdb83cc388b984b1c40ce237ebed098b6f5194f12de443dbded89dbb4fdab2a7a3818d33ef71a44c577537c3985f549cb8d26e855550160ec99bce5784e8a4c"
+    }
+  ],
+  "companyRequests": [
+    {
+      "id": "request-1782647022197-9164vg",
+      "companyName": "Test Company",
+      "adminName": "Test Owner",
+      "email": "owner@test.com",
+      "phone": "+911234567890",
+      "loginId": "testcompany",
+      "passwordHash": "c0388a0e573fe5bf1115735bac0001c3:6189ceb5d8a2a747ac82970f330dfcc0fc643ef097cf430085dc73bc230e0051dcabdfcb5a4005d63a6f9a6709f42e1085d2680fa7e49e7e93348aa7da5ce080",
+      "notes": "",
+      "status": "approved",
+      "submittedAt": "2026-06-28T11:43:42.250Z",
+      "reviewedAt": "2026-06-28T11:44:17.558Z",
+      "reviewedBy": "Demo Admin"
+    },
+    {
+      "id": "request-1782665534819-qxn8dm",
+      "companyName": "kaighost",
+      "adminName": "sai",
+      "email": "bhaveshpatil4251@gmail.com",
+      "phone": "+919307601125",
+      "loginId": "kai",
+      "passwordHash": "3b998b95cf0bad1f32aa549ae4d74868:2bdb83cc388b984b1c40ce237ebed098b6f5194f12de443dbded89dbb4fdab2a7a3818d33ef71a44c577537c3985f549cb8d26e855550160ec99bce5784e8a4c",
+      "notes": "lklnvhnvphvnphvvlnvlknpovhPWWL,X;OONOIBVKSDV BZXCVBNMASDFGHJKLQWERTYUIOP",
+      "status": "approved",
+      "submittedAt": "2026-06-28T16:52:14.873Z",
+      "reviewedAt": "2026-06-28T16:53:27.726Z",
+      "reviewedBy": "Demo Admin"
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-1",
+      "userId": "user-demo",
+      "name": "Ananya Sharma",
+      "company": "BluePeak Solar",
+      "phone": "+919876543210",
+      "email": "ananya@bluepeak.example",
+      "source": "Website form",
+      "status": "Warm",
+      "score": 82,
+      "lastContactedAt": "2026-05-29T19:12:10.992Z",
+      "nextFollowUpAt": "2026-05-31T19:12:10.992Z",
+      "notes": [
+        {
+          "id": "note-1",
+          "createdAt": "2026-05-28T19:12:10.992Z",
+          "content": "Interested in a weekday demo. Asked for a cost comparison with their current vendor."
+        }
+      ],
+      "callLogs": [
+        {
+          "id": "call-1",
+          "createdAt": "2026-05-29T19:12:10.992Z",
+          "direction": "Outbound",
+          "summary": "Quick intro call. She requested a proposal next week.",
+          "outcome": "Interested"
+        }
+      ],
+      "smsLogs": [
+        {
+          "id": "sms-1",
+          "createdAt": "2026-05-29T19:12:10.992Z",
+          "direction": "Outbound",
+          "summary": "Sent demo confirmation and meeting time options."
+        }
+      ]
+    },
+    {
+      "id": "lead-2",
+      "userId": "user-demo",
+      "name": "Rahul Verma",
+      "company": "Northline Fitness",
+      "phone": "+919811112222",
+      "email": "rahul@northline.example",
+      "source": "Referral",
+      "status": "New",
+      "score": 64,
+      "lastContactedAt": null,
+      "nextFollowUpAt": "2026-05-30T19:12:10.992Z",
+      "notes": [],
+      "callLogs": [],
+      "smsLogs": []
+    },
+    {
+      "id": "lead-3",
+      "userId": "user-demo",
+      "name": "Sara Khan",
+      "company": "KiteCart",
+      "phone": "+919955667788",
+      "email": "sara@kitecart.example",
+      "source": "LinkedIn outreach",
+      "status": "Proposal",
+      "score": 91,
+      "lastContactedAt": "2026-05-27T19:12:10.992Z",
+      "nextFollowUpAt": "2026-06-01T19:12:10.992Z",
+      "notes": [
+        {
+          "id": "note-2",
+          "createdAt": "2026-05-26T19:12:10.992Z",
+          "content": "Wants a custom onboarding workflow and team reporting."
+        }
+      ],
+      "callLogs": [
+        {
+          "id": "call-2",
+          "createdAt": "2026-05-27T19:12:10.992Z",
+          "direction": "Outbound",
+          "summary": "Deep-dive product call with two stakeholders.",
+          "outcome": "Follow-up"
+        }
+      ],
+      "smsLogs": []
+    }
+  ]
+}
