@@ -124,6 +124,23 @@ const ActionIcon = ({ type }) => {
     "aria-hidden": true
   };
 
+  if (type === "arrow-right") {
+    return (
+      <svg {...common}>
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    );
+  }
+
+  if (type === "check") {
+    return (
+      <svg {...common}>
+        <path d="M20 6 9 17l-5-5" />
+      </svg>
+    );
+  }
+
   if (type === "admin") {
     return (
       <svg {...common}>
@@ -689,8 +706,9 @@ function App() {
             <div className="site-nav-inner">
               <div className="site-brand">
                 <BrandMark />
-                <div>
-                  <span>CRM</span>
+                <div className="site-brand-text">
+                  <strong>Call Flow</strong>
+                  <span>AI Call CRM</span>
                 </div>
               </div>
 
@@ -700,9 +718,15 @@ function App() {
                 <a href="#contact">Contact</a>
               </nav>
 
-              <button type="button" className="site-download-button">
-                Download app
-              </button>
+              <div className="site-nav-actions">
+                <button type="button" className="nav-login-btn" onClick={() => openAccessModal("login")}>
+                  Company Login
+                </button>
+                <button type="button" className="nav-cta-btn" onClick={() => openAccessModal("register")}>
+                  <span>Register Company</span>
+                  <ActionIcon type="arrow-right" />
+                </button>
+              </div>
 
               {mobileNavOpen ? null : (
                 <button
@@ -723,7 +747,7 @@ function App() {
               className={`mobile-nav-panel ${mobileNavOpen ? "mobile-nav-panel-open" : ""}`}
               aria-hidden={!mobileNavOpen}
             >
-                <div className="mobile-nav-head">
+              <div className="mobile-nav-head">
                 <button
                   type="button"
                   className="mobile-nav-close"
@@ -736,17 +760,30 @@ function App() {
 
               <nav className="mobile-nav-links" aria-label="Mobile primary">
                 <a href="#how-it-works" onClick={() => setMobileNavOpen(false)}>
-                  About
+                  How it works
+                </a>
+                <a href="#features" onClick={() => setMobileNavOpen(false)}>
+                  Features
                 </a>
                 <a href="#contact" onClick={() => setMobileNavOpen(false)}>
                   Contact
                 </a>
               </nav>
 
-              <button type="button" className="mobile-nav-download" onClick={() => setMobileNavOpen(false)}>
-                <span>Download App</span>
-                <ActionIcon type="download" />
-              </button>
+              <div className="mobile-nav-actions-stack">
+                <button type="button" className="nav-cta-btn" onClick={() => { setMobileNavOpen(false); openAccessModal("register"); }}>
+                  <span>Register Company &amp; Get ID</span>
+                  <ActionIcon type="arrow-right" />
+                </button>
+                <button type="button" className="nav-login-btn" onClick={() => { setMobileNavOpen(false); openAccessModal("login"); }}>
+                  <span>Company Login</span>
+                  <ActionIcon type="login" />
+                </button>
+                <button type="button" className="mobile-admin-link" onClick={() => { setMobileNavOpen(false); openAccessModal("admin", "admin"); }}>
+                  <ActionIcon type="admin" />
+                  <span>Admin Panel Login</span>
+                </button>
+              </div>
             </div>
           </header>
 
@@ -754,45 +791,93 @@ function App() {
             <section className="landing-hero">
               <div className="landing-hero-inner">
                 <div className="landing-copy">
-                  <p className="landing-kicker">Sales follow-up system</p>
-                  <h1>
-                    Smarter follow-ups for modern teams.
-                    <span> Call Flow helps reps stay on notes, calls, and next steps.</span>
+                  <div className="hero-kicker-badge">
+                    <span className="kicker-pulse-dot" aria-hidden="true" />
+                    <span>Company Onboarding Portal &amp; AI Call CRM</span>
+                  </div>
+
+                  <h1 className="hero-heading">
+                    The AI Call &amp; Follow-Up CRM<br />
+                    <span className="hero-heading-highlight">Built for Growing Companies.</span>
                   </h1>
 
-                  <div className="landing-actions">
-                    <button type="button" className="hero-primary" onClick={() => openAccessModal("chooser")}>
-                      <span>Start company login</span>
-                      <ActionIcon type="login" />
-                    </button>
+                  <p className="hero-subheading">
+                    Register your company to generate your unique Company ID. Equip your reps with automated call tracking, AI note summaries, and smart callbacks — without expensive telecom APIs.
+                  </p>
+
+                  <div className="hero-cta-cluster">
                     <button
                       type="button"
-                      className="hero-secondary hero-secondary-admin"
+                      className="hero-primary-cta"
+                      onClick={() => openAccessModal("register")}
+                    >
+                      <span className="cta-sparkle" aria-hidden="true">★</span>
+                      <span>Register Company &amp; Get ID</span>
+                      <ActionIcon type="arrow-right" />
+                    </button>
+
+                    <button
+                      type="button"
+                      className="hero-secondary-cta"
+                      onClick={() => openAccessModal("login")}
+                    >
+                      <ActionIcon type="login" />
+                      <span>Company Sign In</span>
+                    </button>
+                  </div>
+
+                  <div className="hero-utility-row">
+                    <button
+                      type="button"
+                      className="utility-btn"
                       onClick={() => openAccessModal("admin", "admin")}
                     >
-                      <span>Admin Panel</span>
                       <ActionIcon type="admin" />
+                      <span>Platform Admin Panel</span>
                     </button>
-                    <button type="button" className="hero-primary hero-download">
-                      <span>Download App</span>
+                    <span className="utility-separator" aria-hidden="true">•</span>
+                    <button
+                      type="button"
+                      className="utility-btn"
+                      onClick={() => openAccessModal("chooser")}
+                    >
                       <ActionIcon type="download" />
+                      <span>Access &amp; Setup Guide</span>
                     </button>
+                  </div>
+
+                  <div className="hero-trust-strip">
+                    <div className="trust-badge">
+                      <span className="trust-check"><ActionIcon type="check" /></span>
+                      <span>Instant Company ID on approval</span>
+                    </div>
+                    <div className="trust-badge">
+                      <span className="trust-check"><ActionIcon type="check" /></span>
+                      <span>Zero paid telecom API setup</span>
+                    </div>
+                    <div className="trust-badge">
+                      <span className="trust-check"><ActionIcon type="check" /></span>
+                      <span>Built-in local AI summarizer</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div className="hero-stats">
                 <article>
-                  <strong>Protected</strong>
-                  <span>Lead history stays organized</span>
+                  <small className="stat-tag">Security &amp; Privacy</small>
+                  <strong>100% Protected</strong>
+                  <span>Each workspace maintains strict isolated lead history &amp; data privacy</span>
                 </article>
                 <article>
-                  <strong>Fast</strong>
-                  <span>Calls, texts, and notes in one place</span>
+                  <small className="stat-tag">Outreach Velocity</small>
+                  <strong>1-Tap Outreach</strong>
+                  <span>Native phone dialer and SMS launch without costly API middlemen</span>
                 </article>
                 <article>
-                  <strong>Separated</strong>
-                  <span>Each workspace keeps its own data flow</span>
+                  <small className="stat-tag">Automated Intelligence</small>
+                  <strong>AI Summaries</strong>
+                  <span>Turn rough sales notes into structured outcomes and next follow-up dates</span>
                 </article>
               </div>
             </section>
@@ -811,29 +896,29 @@ function App() {
                 <article>
                   <span>1</span>
                   <div>
-                    <strong>Company login</strong>
-                    <p>Start with your team account so every call and lead belongs to the right workspace.</p>
+                    <strong>Register &amp; Get Company ID</strong>
+                    <p>Submit your company registration on the portal. Once reviewed by platform admin, your unique Company ID is assigned.</p>
                   </div>
                 </article>
                 <article>
                   <span>2</span>
                   <div>
-                    <strong>Call tracking</strong>
-                    <p>Save outcomes, note objections, and keep the next follow-up one tap away.</p>
+                    <strong>Sign In &amp; Launch Workspace</strong>
+                    <p>Enter your approved Company ID and password to access your team dashboard and start managing leads immediately.</p>
                   </div>
                 </article>
                 <article>
                   <span>3</span>
                   <div>
-                    <strong>AI cleanup</strong>
-                    <p>Turn rough notes into structured summaries, suggested texts, and cleaner timelines.</p>
+                    <strong>1-Tap Call &amp; SMS Outreach</strong>
+                    <p>Click Call or SMS to instantly trigger your device dialer, record customer objections, and log interaction outcomes.</p>
                   </div>
                 </article>
                 <article>
                   <span>4</span>
                   <div>
-                    <strong>Calm pipeline</strong>
-                    <p>Return to a workspace that shows what is due now and what needs attention next.</p>
+                    <strong>AI Summaries &amp; Smart Pipeline</strong>
+                    <p>Transform quick notes into clean bulleted next steps and keep upcoming callbacks organized in a calm pipeline.</p>
                   </div>
                 </article>
               </div>
@@ -900,11 +985,21 @@ function App() {
             </section>
 
             <section className="landing-cta" id="contact">
-              <p>Ready for a calmer sales workflow?</p>
-              <h3>Bring Call Flow to your team desk, follow-up pod, or inside-sales workspace.</h3>
-              <button type="button" className="hero-primary" onClick={() => openAccessModal("chooser")}>
-                Start company login
-              </button>
+              <div className="landing-cta-content">
+                <span className="cta-kicker">Start Your Company Setup</span>
+                <h3>Register your company and equip your sales team in minutes.</h3>
+                <p>Join businesses using Call Flow for clean lead tracking, 1-tap call assistance, and smart AI summaries.</p>
+                <div className="landing-cta-actions">
+                  <button type="button" className="hero-primary-cta" onClick={() => openAccessModal("register")}>
+                    <span>Register Company &amp; Get ID</span>
+                    <ActionIcon type="arrow-right" />
+                  </button>
+                  <button type="button" className="hero-secondary-cta cta-light" onClick={() => openAccessModal("login")}>
+                    <ActionIcon type="login" />
+                    <span>Company Sign In</span>
+                  </button>
+                </div>
+              </div>
             </section>
 
           </main>
@@ -952,7 +1047,7 @@ function App() {
 
                 <div className={`access-modal-intro ${authMode === "chooser" ? "access-modal-intro-compact" : ""}`}>
                   {authMode === "chooser" ? (
-                    <p>Select one option to continue.</p>
+                    <p>Select an option below. New companies must register first to receive an approved Company ID.</p>
                   ) : authMode === "admin" ? (
                     null
                   ) : authMode === "login" ? (
@@ -966,17 +1061,22 @@ function App() {
 
                 {authMode === "chooser" ? (
                   <div className="access-choice-grid">
-                    <button type="button" className="access-choice-card" onClick={() => setAuthMode("login")}>
-                      <small>Approved workspace</small>
-                      <strong>Company Login</strong>
-                      <span>Fast access for approved teams</span>
-                      <em>Continue to Login</em>
-                    </button>
-                    <button type="button" className="access-choice-card" onClick={() => setAuthMode("register")}>
-                      <small>New company</small>
+                    <button type="button" className="access-choice-card access-choice-recommended" onClick={() => setAuthMode("register")}>
+                      <div className="choice-badge-row">
+                        <small>New Company</small>
+                        <span className="badge-recommended">First-Time Setup</span>
+                      </div>
                       <strong>Register Company</strong>
-                      <span>Best for first-time company setup</span>
-                      <em>Create Registration Ticket</em>
+                      <span>Submit company details to receive your unique Company ID upon approval</span>
+                      <em>Start Registration &rarr;</em>
+                    </button>
+                    <button type="button" className="access-choice-card" onClick={() => setAuthMode("login")}>
+                      <div className="choice-badge-row">
+                        <small>Approved Company</small>
+                      </div>
+                      <strong>Company Login</strong>
+                      <span>Fast access using your approved Company ID or username</span>
+                      <em>Continue to Sign In &rarr;</em>
                     </button>
                   </div>
                 ) : null}

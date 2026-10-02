@@ -18,4 +18,5 @@ server/serviceAccountKey.json
 Thumbs.db
 .idea/
 .vscode/
+.rivocode/
 *.log
