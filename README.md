@@ -56,10 +56,23 @@ At the very top of the landing experience, the website presents four high-contra
 
 | Pillar | Focus | Implementation & Description |
 | :--- | :--- | :--- |
-| **01 // WHAT IT IS** | Core Product | Zero-telecom-cost AI Call CRM & Company Provisioning Portal. Auto-converts call audio into structured leads and instant executive summaries. |
-| **02 // WHO IT IS FOR** | Target Audience | Fast-moving sales agencies, field teams, and SMB revenue organizations handling high daily outbound/inbound phone calls. |
-| **03 // WHY IT MATTERS** | Value Proposition | Eliminates manual CRM data entry, expensive Twilio telephony fees, and lost call details with instant automated follow-ups. |
+| **01 // WHAT IT IS** | Core Product | Automatic AI call recording summarizer, transcription engine & task checklist CRM. Turns any spoken conversation into structured notes in 2 seconds. |
+| **02 // WHO IT IS FOR** | Universal Audience | **All types of users**: Sales reps, business owners, freelancers, real estate brokers, consultants, field technicians, and individual professionals. |
+| **03 // WHY IT MATTERS** | Value Proposition | Eliminates manual note-taking friction, remembers 100% of spoken commitments, and prepares ready-to-send follow-up SMS messages at $0 telecom fees. |
 | **04 // WHAT TO DO NEXT** | Primary Action | Click **`Register Company`** below to provision your company workspace and receive your automated Company ID. |
+
+---
+
+## 👥 Built for All Types of Users
+
+Whether you run a large sales team or work independently, the platform automatically creates actionable summaries for every call:
+
+- **Sales Reps & Closers**: Captures prospect objections, agreed pricing, budget limits, and triggers 1-tap quote follow-ups.
+- **Freelancers & Consultants**: Automatically logs client feedback, project scope adjustments, and deadline agreements so nothing is forgotten.
+- **Real Estate Brokers**: Records buyer criteria, budget constraints, preferred localities, and scheduled site inspection dates.
+- **Contractors & Field Engineers**: Extracts job site addresses, required parts, repair descriptions, and customer arrival windows.
+- **Small Business Owners & Traders**: Summarizes wholesale supplier pricing, delivery schedules, and payment terms without taking paper notes.
+- **Everyday Professionals**: Summarizes complex phone interviews, customer support disputes, and important personal service appointments.
 
 ---
 

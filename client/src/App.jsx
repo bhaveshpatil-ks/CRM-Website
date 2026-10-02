@@ -798,26 +798,26 @@ function App() {
                   </div>
 
                   <h1 className="arch-title">
-                    Turn phone calls into leads &amp; instant AI notes.
+                    Instant AI call summaries for every conversation &amp; user.
                   </h1>
 
                   <p className="arch-lead">
-                    Built for sales reps, field agents, brokers, and industry teams closing business on the phone. The second a call finishes on your device, AI automatically transcribes recording audio, creates lead profiles, and extracts action items — with zero telecom carrier fees.
+                    Built for all types of users — sales reps, freelancers, consultants, real estate brokers, field technicians, and business owners. The second your phone call finishes, AI automatically transcribes the audio, generates an executive summary, and prepares an instant follow-up SMS.
                   </p>
 
                   {/* ABOVE-THE-FOLD 4-PILLAR ARCHITECTURAL SYSTEM */}
                   <div className="arch-hero-pillars">
                     <div className="arch-pillar-cell">
                       <span className="arch-pillar-label">WHAT IT IS</span>
-                      <p className="arch-pillar-desc">Automated AI call recording summarizer, transcription engine &amp; lead CRM.</p>
+                      <p className="arch-pillar-desc">Automatic AI call recording summarizer, transcription engine &amp; task checklist CRM.</p>
                     </div>
                     <div className="arch-pillar-cell">
                       <span className="arch-pillar-label">WHO IT IS FOR</span>
-                      <p className="arch-pillar-desc">Sales reps, brokers, field technicians &amp; client service teams.</p>
+                      <p className="arch-pillar-desc">All types of users: Sales, freelancers, consultants, brokers, field teams &amp; businesses.</p>
                     </div>
                     <div className="arch-pillar-cell">
                       <span className="arch-pillar-label">WHY IT MATTERS</span>
-                      <p className="arch-pillar-desc">Never type manual call logs. Catch 100% of verbal deals with $0 carrier markup.</p>
+                      <p className="arch-pillar-desc">Never write manual notes again. Get 2-second summaries and 1-tap client follow-ups.</p>
                     </div>
                   </div>
 
