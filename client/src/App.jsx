@@ -707,24 +707,24 @@ function App() {
               <div className="site-brand">
                 <BrandMark />
                 <div className="site-brand-text">
+                  <span className="brand-sys-tag">SYS // CRM-2026</span>
                   <strong>Call Flow</strong>
-                  <span>AI Call CRM</span>
                 </div>
               </div>
 
               <nav className="site-links" aria-label="Primary">
-                <a href="#how-it-works">How it works</a>
-                <a href="#features">Features</a>
-                <a href="#contact">Contact</a>
+                <a href="#how-it-works"><span className="link-num">01</span> Workflow</a>
+                <a href="#features"><span className="link-num">02</span> Architecture</a>
+                <a href="#contact"><span className="link-num">03</span> Access</a>
               </nav>
 
               <div className="site-nav-actions">
                 <button type="button" className="nav-login-btn" onClick={() => openAccessModal("login")}>
-                  Company Login
+                  Sign In
                 </button>
                 <button type="button" className="nav-cta-btn" onClick={() => openAccessModal("register")}>
                   <span>Register Company</span>
-                  <ActionIcon type="arrow-right" />
+                  <span className="btn-arrow">&rarr;</span>
                 </button>
               </div>
 
@@ -748,260 +748,335 @@ function App() {
               aria-hidden={!mobileNavOpen}
             >
               <div className="mobile-nav-head">
+                <span className="mobile-brand-tag">SYS // NAVIGATION</span>
                 <button
                   type="button"
                   className="mobile-nav-close"
                   aria-label="Close navigation menu"
                   onClick={() => setMobileNavOpen(false)}
                 >
-                  X
+                  ✕
                 </button>
               </div>
 
               <nav className="mobile-nav-links" aria-label="Mobile primary">
                 <a href="#how-it-works" onClick={() => setMobileNavOpen(false)}>
-                  How it works
+                  01 / Workflow Pipeline
                 </a>
                 <a href="#features" onClick={() => setMobileNavOpen(false)}>
-                  Features
+                  02 / Architecture &amp; Blueprints
                 </a>
                 <a href="#contact" onClick={() => setMobileNavOpen(false)}>
-                  Contact
+                  03 / Company Access &amp; Inquiries
                 </a>
               </nav>
 
               <div className="mobile-nav-actions-stack">
-                <button type="button" className="nav-cta-btn" onClick={() => { setMobileNavOpen(false); openAccessModal("register"); }}>
+                <button type="button" className="nav-cta-btn mobile-full-btn" onClick={() => { setMobileNavOpen(false); openAccessModal("register"); }}>
                   <span>Register Company &amp; Get ID</span>
-                  <ActionIcon type="arrow-right" />
+                  <span className="btn-arrow">&rarr;</span>
                 </button>
-                <button type="button" className="nav-login-btn" onClick={() => { setMobileNavOpen(false); openAccessModal("login"); }}>
-                  <span>Company Login</span>
-                  <ActionIcon type="login" />
+                <button type="button" className="nav-login-btn mobile-full-btn" onClick={() => { setMobileNavOpen(false); openAccessModal("login"); }}>
+                  <span>Company Sign In</span>
                 </button>
                 <button type="button" className="mobile-admin-link" onClick={() => { setMobileNavOpen(false); openAccessModal("admin", "admin"); }}>
                   <ActionIcon type="admin" />
-                  <span>Admin Panel Login</span>
+                  <span>Platform Admin Terminal</span>
                 </button>
               </div>
             </div>
           </header>
 
-          <main>
-            <section className="landing-hero">
-              <div className="landing-hero-inner">
-                <div className="landing-copy">
-                  <div className="hero-kicker-badge">
-                    <span className="kicker-pulse-dot" aria-hidden="true" />
-                    <span>Company Onboarding Portal &amp; AI Call CRM</span>
+          <main className="arch-main">
+            {/* HERO SECTION: ARCHITECTURAL SPLIT LAYOUT */}
+            <section className="arch-hero">
+              <div className="arch-hero-container">
+                <div className="arch-hero-left">
+                  <div className="arch-badge">
+                    <span className="arch-pulse-dot" aria-hidden="true" />
+                    <span className="arch-badge-mono">SYS // ONBOARDING &amp; CALL ARCHITECTURE</span>
                   </div>
 
-                  <h1 className="hero-heading">
-                    The AI Call &amp; Follow-Up CRM<br />
-                    <span className="hero-heading-highlight">Built for Growing Companies.</span>
+                  <h1 className="arch-title">
+                    Register Company.<br />
+                    Assign Your ID.<br />
+                    Deploy Modern Calling.
                   </h1>
 
-                  <p className="hero-subheading">
-                    Register your company to generate your unique Company ID. Equip your reps with automated call tracking, AI note summaries, and smart callbacks — without expensive telecom APIs.
+                  <p className="arch-lead">
+                    The portal provisions your company credentials and issues your unique <code className="arch-code-highlight">CALL-XXXXXX</code> identifier. Inside your workspace, teams execute sales calls, trigger AI note summaries, and schedule callbacks — with zero telecom API billing.
                   </p>
 
-                  <div className="hero-cta-cluster">
+                  <div className="arch-cta-row">
                     <button
                       type="button"
-                      className="hero-primary-cta"
+                      className="arch-btn-primary"
                       onClick={() => openAccessModal("register")}
                     >
-                      <span className="cta-sparkle" aria-hidden="true">★</span>
-                      <span>Register Company &amp; Get ID</span>
-                      <ActionIcon type="arrow-right" />
+                      <span className="arch-btn-step">01</span>
+                      <span className="arch-btn-text">Register Company &amp; Get ID</span>
+                      <span className="arch-btn-arrow">&rarr;</span>
                     </button>
 
                     <button
                       type="button"
-                      className="hero-secondary-cta"
+                      className="arch-btn-secondary"
                       onClick={() => openAccessModal("login")}
                     >
                       <ActionIcon type="login" />
-                      <span>Company Sign In</span>
+                      <span className="arch-btn-text">Company Sign In</span>
                     </button>
                   </div>
 
-                  <div className="hero-utility-row">
+                  <div className="arch-utility-row">
                     <button
                       type="button"
-                      className="utility-btn"
+                      className="arch-link-btn"
                       onClick={() => openAccessModal("admin", "admin")}
                     >
                       <ActionIcon type="admin" />
-                      <span>Platform Admin Panel</span>
+                      <span>Platform Admin Login</span>
                     </button>
-                    <span className="utility-separator" aria-hidden="true">•</span>
+                    <span className="arch-sep">/</span>
                     <button
                       type="button"
-                      className="utility-btn"
+                      className="arch-link-btn"
                       onClick={() => openAccessModal("chooser")}
                     >
                       <ActionIcon type="download" />
-                      <span>Access &amp; Setup Guide</span>
+                      <span>Onboarding Guide &amp; App</span>
                     </button>
                   </div>
 
-                  <div className="hero-trust-strip">
-                    <div className="trust-badge">
-                      <span className="trust-check"><ActionIcon type="check" /></span>
-                      <span>Instant Company ID on approval</span>
+                  <div className="arch-telemetry-grid">
+                    <div className="arch-telemetry-cell">
+                      <span className="telemetry-label">IDENTIFIER</span>
+                      <strong className="telemetry-value">CALL-XXXXXX</strong>
+                      <span className="telemetry-desc">Unique ID generated on approval</span>
                     </div>
-                    <div className="trust-badge">
-                      <span className="trust-check"><ActionIcon type="check" /></span>
-                      <span>Zero paid telecom API setup</span>
+                    <div className="arch-telemetry-cell">
+                      <span className="telemetry-label">TELECOM TAX</span>
+                      <strong className="telemetry-value">$0.00 / FREE</strong>
+                      <span className="telemetry-desc">Native device dialer &amp; SMS</span>
                     </div>
-                    <div className="trust-badge">
-                      <span className="trust-check"><ActionIcon type="check" /></span>
-                      <span>Built-in local AI summarizer</span>
+                    <div className="arch-telemetry-cell">
+                      <span className="telemetry-label">INTELLIGENCE</span>
+                      <strong className="telemetry-value">LOCAL AI</strong>
+                      <span className="telemetry-desc">Instant 2-line note extraction</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="arch-hero-right">
+                  <div className="arch-terminal">
+                    <div className="terminal-header">
+                      <div className="terminal-controls">
+                        <span className="dot dot-red" />
+                        <span className="dot dot-yellow" />
+                        <span className="dot dot-green" />
+                      </div>
+                      <span className="terminal-title">SPECIMEN // ONBOARDING_FLOW_v2.0</span>
+                      <span className="terminal-status">[ ACTIVE ]</span>
+                    </div>
+
+                    <div className="terminal-body">
+                      <div className="terminal-step completed">
+                        <div className="step-tag">PHASE 01: WEB REGISTRATION</div>
+                        <div className="step-code">
+                          <span className="code-key">company:</span> <span className="code-str">&quot;BluePeak Solar Systems&quot;</span><br />
+                          <span className="code-key">admin:</span> <span className="code-str">&quot;Ananya Sharma&quot;</span><br />
+                          <span className="code-key">login_id:</span> <span className="code-str">&quot;bluepeak&quot;</span>
+                        </div>
+                      </div>
+
+                      <div className="terminal-connector">
+                        <span className="connector-line" />
+                        <span className="connector-badge">ADMIN APPROVED</span>
+                      </div>
+
+                      <div className="terminal-step highlighted">
+                        <div className="step-tag">PHASE 02: ASSIGNED COMPANY IDENTIFIER</div>
+                        <div className="company-id-specimen">
+                          <span className="specimen-id-label">OFFICIAL COMPANY ID</span>
+                          <strong className="specimen-id-value">CALL-240001</strong>
+                          <span className="specimen-id-note">Permanent workspace key • Instant verification</span>
+                        </div>
+                      </div>
+
+                      <div className="terminal-connector">
+                        <span className="connector-line" />
+                        <span className="connector-badge">WORKSPACE UNLOCKED</span>
+                      </div>
+
+                      <div className="terminal-step">
+                        <div className="step-tag">PHASE 03: 1-TAP SALES OUTREACH &amp; AI</div>
+                        <div className="live-action-strip">
+                          <div className="action-pill"><span className="pill-dot green" /> Dialer: 1-Tap Ready</div>
+                          <div className="action-pill"><span className="pill-dot blue" /> AI: Summary Generated</div>
+                          <div className="action-pill"><span className="pill-dot amber" /> Callback: Due in 2d</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div className="hero-stats">
-                <article>
-                  <small className="stat-tag">Security &amp; Privacy</small>
-                  <strong>100% Protected</strong>
-                  <span>Each workspace maintains strict isolated lead history &amp; data privacy</span>
-                </article>
-                <article>
-                  <small className="stat-tag">Outreach Velocity</small>
-                  <strong>1-Tap Outreach</strong>
-                  <span>Native phone dialer and SMS launch without costly API middlemen</span>
-                </article>
-                <article>
-                  <small className="stat-tag">Automated Intelligence</small>
-                  <strong>AI Summaries</strong>
-                  <span>Turn rough sales notes into structured outcomes and next follow-up dates</span>
-                </article>
-              </div>
             </section>
 
-            <section className="process-section" id="how-it-works">
-              <div className="process-story">
-                <span>How Call Flow works</span>
-                <h3>Designed for front-desk, inside-sales, and fast-moving follow-up teams.</h3>
-                <p>
-                  The workflow keeps every outreach step visible while handling summaries, reminders, and
-                  suggested next actions behind the scenes.
+            {/* SECTION 2: 4-COLUMN ARCHITECTURAL PIPELINE MATRIX */}
+            <section className="arch-pipeline-section" id="how-it-works">
+              <div className="pipeline-header">
+                <div className="pipeline-header-copy">
+                  <span className="arch-section-tag">[ 01 // ARCHITECTURAL PIPELINE ]</span>
+                  <h2 className="arch-section-title">The Four-Stage Company Lifecycle</h2>
+                </div>
+                <p className="pipeline-header-lead">
+                  Engineered specifically so company onboarding stays organized on the web while sales outreach executes at maximum velocity in the CRM workspace.
                 </p>
               </div>
 
-              <div className="process-list">
-                <article>
-                  <span>1</span>
-                  <div>
-                    <strong>Register &amp; Get Company ID</strong>
-                    <p>Submit your company registration on the portal. Once reviewed by platform admin, your unique Company ID is assigned.</p>
+              <div className="pipeline-grid">
+                <div className="pipeline-col">
+                  <span className="col-num">01</span>
+                  <span className="col-category">REGISTRATION</span>
+                  <h3 className="col-title">Submit Company Ticket</h3>
+                  <p className="col-text">
+                    Enter company name, administrator contact, and preferred login ID through the website form. No third-party API keys required.
+                  </p>
+                  <div className="col-status-bar">
+                    <span className="status-label">STATUS</span>
+                    <span className="status-val pending">QUEUE_PENDING</span>
                   </div>
-                </article>
-                <article>
-                  <span>2</span>
-                  <div>
-                    <strong>Sign In &amp; Launch Workspace</strong>
-                    <p>Enter your approved Company ID and password to access your team dashboard and start managing leads immediately.</p>
-                  </div>
-                </article>
-                <article>
-                  <span>3</span>
-                  <div>
-                    <strong>1-Tap Call &amp; SMS Outreach</strong>
-                    <p>Click Call or SMS to instantly trigger your device dialer, record customer objections, and log interaction outcomes.</p>
-                  </div>
-                </article>
-                <article>
-                  <span>4</span>
-                  <div>
-                    <strong>AI Summaries &amp; Smart Pipeline</strong>
-                    <p>Transform quick notes into clean bulleted next steps and keep upcoming callbacks organized in a calm pipeline.</p>
-                  </div>
-                </article>
-              </div>
-            </section>
+                </div>
 
-            <section className="feature-showcase" id="features">
-              <div className="feature-showcase-head">
-                <p>Everything your call desk needs, shown as simple working moments.</p>
-                <h3>Four clean surfaces that keep momentum high and admin work low.</h3>
-              </div>
-
-              <div className="feature-columns">
-                <article className="showcase-phone">
-                  <span>01</span>
-                  <div className="phone-mock">
-                    <div className="phone-screen">
-                      <div className="phone-brand">Call Flow</div>
-                      <div className="phone-card face-card">Lead profile ready</div>
-                      <div className="phone-card note-card">Follow-up summary prepared</div>
-                      <div className="phone-button">Create follow-up</div>
-                    </div>
+                <div className="pipeline-col">
+                  <span className="col-num">02</span>
+                  <span className="col-category">VERIFICATION</span>
+                  <h3 className="col-title">Company ID Issued</h3>
+                  <p className="col-text">
+                    Platform admin reviews and approves the ticket. The system assigns your permanent Company ID (e.g. <code>CALL-240001</code>) for sign-in.
+                  </p>
+                  <div className="col-status-bar">
+                    <span className="status-label">STATUS</span>
+                    <span className="status-val verified">ID_PROVISIONED</span>
                   </div>
-                </article>
+                </div>
 
-                <article className="showcase-panel soft-green">
-                  <span>02</span>
-                  <small>Smart notes</small>
-                  <h4>Call notes turn into clean next steps</h4>
-                  <p>Capture the conversation once and let the workspace shape the summary, outcome, and follow-up direction.</p>
-                  <div className="showcase-bottom-card dark">
-                    <strong>Summary ready</strong>
-                    <span>Key objections, decision signals, and next actions are already structured.</span>
+                <div className="pipeline-col">
+                  <span className="col-num">03</span>
+                  <span className="col-category">OUTREACH</span>
+                  <h3 className="col-title">1-Tap Direct Calling</h3>
+                  <p className="col-text">
+                    Reps click Call or SMS to instantly open device phone dialers via native protocols. Zero telecom per-minute gateway markup.
+                  </p>
+                  <div className="col-status-bar">
+                    <span className="status-label">STATUS</span>
+                    <span className="status-val active">DIRECT_CONNECT</span>
                   </div>
-                </article>
+                </div>
 
-                <article className="showcase-panel soft-lime">
-                  <span>03</span>
-                  <small>Reminder flow</small>
-                  <h4>Follow-ups stay visible when timing gets messy</h4>
-                  <p>Keep reminders, promised callbacks, and status updates lined up so the next move never gets lost.</p>
-                  <div className="showcase-bottom-card">
-                    <div className="mini-row">
-                      <strong>11:00</strong>
-                      <span>Call due</span>
-                    </div>
-                    <div className="mini-row">
-                      <strong>14:30</strong>
-                      <span>Proposal follow-up</span>
-                    </div>
+                <div className="pipeline-col">
+                  <span className="col-num">04</span>
+                  <span className="col-category">SYNTHESIS</span>
+                  <h3 className="col-title">AI Note Extraction</h3>
+                  <p className="col-text">
+                    Rough call notes turn into 2-line summaries, objection categorization, suggested follow-up SMS text, and scheduled callbacks.
+                  </p>
+                  <div className="col-status-bar">
+                    <span className="status-label">STATUS</span>
+                    <span className="status-val ai">AI_SYNTHESIZED</span>
                   </div>
-                </article>
-
-                <article className="showcase-panel soft-green">
-                  <span>04</span>
-                  <small>Clear recovery</small>
-                  <h4>Every rep comes back with context intact</h4>
-                  <p>When a session breaks or the day gets interrupted, the workspace returns with recent notes, pending tasks, and lead history intact.</p>
-                  <div className="showcase-bottom-card">
-                    <strong>Workspace restored</strong>
-                    <span>Recent lead activity and saved notes are ready the moment you return.</span>
-                  </div>
-                </article>
-              </div>
-            </section>
-
-            <section className="landing-cta" id="contact">
-              <div className="landing-cta-content">
-                <span className="cta-kicker">Start Your Company Setup</span>
-                <h3>Register your company and equip your sales team in minutes.</h3>
-                <p>Join businesses using Call Flow for clean lead tracking, 1-tap call assistance, and smart AI summaries.</p>
-                <div className="landing-cta-actions">
-                  <button type="button" className="hero-primary-cta" onClick={() => openAccessModal("register")}>
-                    <span>Register Company &amp; Get ID</span>
-                    <ActionIcon type="arrow-right" />
-                  </button>
-                  <button type="button" className="hero-secondary-cta cta-light" onClick={() => openAccessModal("login")}>
-                    <ActionIcon type="login" />
-                    <span>Company Sign In</span>
-                  </button>
                 </div>
               </div>
             </section>
 
+            {/* SECTION 3: SYSTEM BLUEPRINTS */}
+            <section className="arch-blueprints-section" id="features">
+              <div className="blueprints-header">
+                <span className="arch-section-tag">[ 02 // TECHNICAL BLUEPRINT ]</span>
+                <h2 className="arch-section-title">Designed for Output, Not Admin Friction</h2>
+              </div>
+
+              <div className="blueprints-grid">
+                <div className="blueprint-card">
+                  <div className="blueprint-top">
+                    <span className="bp-index">BP-01</span>
+                    <span className="bp-tag">TELECOM ARCHITECTURE</span>
+                  </div>
+                  <h4>Zero-Cost Native Telecom Protocol</h4>
+                  <p>
+                    Traditional CRMs force you into paid Twilio integrations with ongoing monthly phone numbers and per-minute costs. Call Flow utilizes native <code>tel:</code> and <code>sms:</code> handlers to trigger real calls on any hardware instantly for $0.
+                  </p>
+                  <div className="bp-data-table">
+                    <div className="bp-row">
+                      <span>Traditional Telecom CRM</span>
+                      <strong className="cost-bad">$0.04 - $0.12 / min</strong>
+                    </div>
+                    <div className="bp-row">
+                      <span>Call Flow CRM Protocol</span>
+                      <strong className="cost-good">$0.00 / FREE NATIVE</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="blueprint-card">
+                  <div className="blueprint-top">
+                    <span className="bp-index">BP-02</span>
+                    <span className="bp-tag">AI PROCESSING</span>
+                  </div>
+                  <h4>Dual-Engine Note Synthesis</h4>
+                  <p>
+                    Write rough notes during the call. The engine extracts the customer outcome (Interested, Callback, Closed), formulates an immediate SMS response, and calculates the optimal callback date automatically.
+                  </p>
+                  <div className="bp-code-preview">
+                    <div className="code-line"><span className="c-dim">// Input Note:</span> &quot;Spoke with VP. Send pricing tomorrow, loves the demo.&quot;</div>
+                    <div className="code-line"><span className="c-green">&rarr; Outcome:</span> Interested | Follow-up: +1 Day</div>
+                    <div className="code-line"><span className="c-green">&rarr; Suggested SMS:</span> &quot;Hi, thanks for the call. Sharing pricing details shortly.&quot;</div>
+                  </div>
+                </div>
+
+                <div className="blueprint-card">
+                  <div className="blueprint-top">
+                    <span className="bp-index">BP-03</span>
+                    <span className="bp-tag">DATA ISOLATION</span>
+                  </div>
+                  <h4>Guaranteed Workspace Segregation</h4>
+                  <p>
+                    Every approved company receives its own isolated data workspace. Leads, call recordings, notes, and activity feeds never leak across boundaries, while platform admins maintain clean global approval control.
+                  </p>
+                  <div className="bp-data-table">
+                    <div className="bp-row">
+                      <span>Access Verification</span>
+                      <strong>Strict JWT Tokens</strong>
+                    </div>
+                    <div className="bp-row">
+                      <span>Lead Isolation</span>
+                      <strong>Per-Company Scoped</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* SECTION 4: COMMAND BANNER CTA */}
+            <section className="arch-command-section" id="contact">
+              <div className="command-banner">
+                <div className="command-banner-left">
+                  <span className="command-tag">[ COMMAND // GET STARTED ]</span>
+                  <h3>Register your company and claim your Company ID.</h3>
+                  <p>Join front-desk and inside-sales teams operating a cleaner, calmer, and faster sales follow-up machine.</p>
+                </div>
+                <div className="command-banner-right">
+                  <button type="button" className="arch-btn-primary banner-cta" onClick={() => openAccessModal("register")}>
+                    <span className="arch-btn-step">01</span>
+                    <span className="arch-btn-text">Register Company &amp; Get ID</span>
+                    <span className="arch-btn-arrow">&rarr;</span>
+                  </button>
+                  <button type="button" className="arch-btn-secondary banner-cta" onClick={() => openAccessModal("login")}>
+                    <span className="arch-btn-text">Sign In with Existing ID</span>
+                  </button>
+                </div>
+              </div>
+            </section>
           </main>
 
           {accessModalOpen ? (
