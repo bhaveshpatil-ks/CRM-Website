@@ -794,18 +794,32 @@ function App() {
                 <div className="arch-hero-left">
                   <div className="arch-badge">
                     <span className="arch-pulse-dot" aria-hidden="true" />
-                    <span className="arch-badge-mono">SYS // ONBOARDING &amp; CALL ARCHITECTURE</span>
+                    <span className="arch-badge-mono">SYS // AI CALL RECORDING CRM</span>
                   </div>
 
                   <h1 className="arch-title">
-                    Register Company.<br />
-                    Assign Your ID.<br />
-                    Deploy Modern Calling.
+                    Turn phone calls into leads &amp; instant AI notes.
                   </h1>
 
                   <p className="arch-lead">
-                    The portal provisions your company credentials and issues your unique <code className="arch-code-highlight">CALL-XXXXXX</code> identifier. Inside your workspace, teams execute sales calls, trigger AI note summaries, and schedule callbacks — with zero telecom API billing.
+                    Built for sales reps, field agents, brokers, and industry teams closing business on the phone. The second a call finishes on your device, AI automatically transcribes recording audio, creates lead profiles, and extracts action items — with zero telecom carrier fees.
                   </p>
+
+                  {/* ABOVE-THE-FOLD 4-PILLAR ARCHITECTURAL SYSTEM */}
+                  <div className="arch-hero-pillars">
+                    <div className="arch-pillar-cell">
+                      <span className="arch-pillar-label">WHAT IT IS</span>
+                      <p className="arch-pillar-desc">Automated AI call recording summarizer, transcription engine &amp; lead CRM.</p>
+                    </div>
+                    <div className="arch-pillar-cell">
+                      <span className="arch-pillar-label">WHO IT IS FOR</span>
+                      <p className="arch-pillar-desc">Sales reps, brokers, field technicians &amp; client service teams.</p>
+                    </div>
+                    <div className="arch-pillar-cell">
+                      <span className="arch-pillar-label">WHY IT MATTERS</span>
+                      <p className="arch-pillar-desc">Never type manual call logs. Catch 100% of verbal deals with $0 carrier markup.</p>
+                    </div>
+                  </div>
 
                   <div className="arch-cta-row">
                     <button
@@ -823,7 +837,6 @@ function App() {
                       className="arch-btn-secondary"
                       onClick={() => openAccessModal("login")}
                     >
-                      <ActionIcon type="login" />
                       <span className="arch-btn-text">Company Sign In</span>
                     </button>
                   </div>
@@ -834,7 +847,6 @@ function App() {
                       className="arch-link-btn"
                       onClick={() => openAccessModal("admin", "admin")}
                     >
-                      <ActionIcon type="admin" />
                       <span>Platform Admin Login</span>
                     </button>
                     <span className="arch-sep">/</span>
@@ -843,26 +855,25 @@ function App() {
                       className="arch-link-btn"
                       onClick={() => openAccessModal("chooser")}
                     >
-                      <ActionIcon type="download" />
                       <span>Onboarding Guide &amp; App</span>
                     </button>
                   </div>
 
                   <div className="arch-telemetry-grid">
                     <div className="arch-telemetry-cell">
-                      <span className="telemetry-label">IDENTIFIER</span>
-                      <strong className="telemetry-value">CALL-XXXXXX</strong>
-                      <span className="telemetry-desc">Unique ID generated on approval</span>
+                      <span className="telemetry-label">WHAT TO DO NEXT</span>
+                      <strong className="telemetry-value">REGISTER COMPANY</strong>
+                      <span className="telemetry-desc">Get your CALL-ID in 60s &amp; deploy the app</span>
                     </div>
                     <div className="arch-telemetry-cell">
                       <span className="telemetry-label">TELECOM TAX</span>
                       <strong className="telemetry-value">$0.00 / FREE</strong>
-                      <span className="telemetry-desc">Native device dialer &amp; SMS</span>
+                      <span className="telemetry-desc">Native device dialer &amp; carrier SIM</span>
                     </div>
                     <div className="arch-telemetry-cell">
                       <span className="telemetry-label">INTELLIGENCE</span>
-                      <strong className="telemetry-value">LOCAL AI</strong>
-                      <span className="telemetry-desc">Instant 2-line note extraction</span>
+                      <strong className="telemetry-value">AUTO-SYNC AI</strong>
+                      <span className="telemetry-desc">Instant 2-line notes &amp; action checklist</span>
                     </div>
                   </div>
                 </div>
