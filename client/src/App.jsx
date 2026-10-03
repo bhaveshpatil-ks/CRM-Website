@@ -1656,16 +1656,10 @@ function App() {
             </div>
             <div className="company-download-grid">
               <article className="company-download-card">
-                <span>Desktop app</span>
-                <strong>Windows workspace app</strong>
-                <p>Best for desk teams handling calls, notes, and follow-up routing every day.</p>
-                <button type="button" className="primary-button">Download for Windows</button>
-              </article>
-              <article className="company-download-card">
                 <span>Mobile app</span>
-                <strong>Android field access</strong>
-                <p>For field teams, quick call outcomes, and mobile follow-up visibility on the go.</p>
-                <button type="button" className="secondary-button">Get Android app</button>
+                <strong>Android Call CRM App</strong>
+                <p>Automatic call recording capture, AI executive summaries, and mobile follow-up management on Android.</p>
+                <button type="button" className="primary-button">Download Android App (.apk)</button>
               </article>
             </div>
           </section>
